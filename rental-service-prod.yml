@@ -31,3 +31,13 @@ eureka:
     prefer-ip-address: true
 server:
   port: 0
+
+resilience4j:
+  retry:
+    instances:
+      inventory-retry:
+        max-attempts: 5
+        wait-duration: 10s
+      payment-retry:
+        max-attempts: 10
+        wait-duration: 15s
