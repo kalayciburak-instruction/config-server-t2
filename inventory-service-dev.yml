@@ -5,7 +5,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: http://192.168.1.102:8080/realms/RentACarMicroservice/protocol/openid-connect/certs
+          jwk-set-uri: http://192.168.1.101:8080/realms/RentACarMicroservice/protocol/openid-connect/certs
   datasource:
     username: postgres
     password: '12345'
@@ -18,12 +18,12 @@ spring:
       ddl-auto: update
   kafka:
     producer:
-      bootstrap-servers: http://192.168.1.102:9092
+      bootstrap-servers: http://192.168.1.101:9092
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
     consumer:
       auto-offset-reset: earliest
-      bootstrap-servers: http://192.168.1.102:9092
+      bootstrap-servers: http://192.168.1.101:9092
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       properties:
         spring:

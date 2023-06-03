@@ -4,7 +4,7 @@ spring:
   datasource:
     username: root
     password: 12345
-    url: jdbc:mysql://192.168.1.102:3307/paymentdb-t2?createDatabaseIfNotExist=true
+    url: jdbc:mysql://192.168.1.101:3307/paymentdb-t2?createDatabaseIfNotExist=true
   jpa:
     properties:
       hibernate:
